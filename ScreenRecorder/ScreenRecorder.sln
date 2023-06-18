@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScreenRecorder", "ScreenRecorder.vcxproj", "{2C4D35C4-434E-4653-ACE7-0F2E240446B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C4D35C4-434E-4653-ACE7-0F2E240446B3}.Debug|x64.ActiveCfg = Debug|x64
+		{2C4D35C4-434E-4653-ACE7-0F2E240446B3}.Debug|x64.Build.0 = Debug|x64
+		{2C4D35C4-434E-4653-ACE7-0F2E240446B3}.Release|x64.ActiveCfg = Release|x64
+		{2C4D35C4-434E-4653-ACE7-0F2E240446B3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7027DC7B-D4F2-45E2-8372-3FEC0AA7A90B}
+	EndGlobalSection
+EndGlobal
