@@ -20,16 +20,29 @@ private slots:
     void startRecording();
     void stopRecording();
     void updateScreen();
+    void getSensitiveInfo();
 private:
     QScreen* screen;
+
     QLabel* outputLabel;
+
+    QLabel* textlabel1;
+    QLineEdit* text1;
+
+    QLabel* textlabel2;
+    QLineEdit* text2;
+
+    QPushButton* submitButton;
     QPushButton* startButton;
     QPushButton* stopButton;
+
     QTimer* timer;
 
     tesseract::TessBaseAPI tess;
 
     QPixmap convertPix(QPixmap& pixmap);
+
+    std::vector<std::string> sensitiveInfo;
 };
 
 

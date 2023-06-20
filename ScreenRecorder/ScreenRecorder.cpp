@@ -1,8 +1,8 @@
 #include "screenrecorder.h"
 #include <QGuiApplication>
 #include <opencv2/opencv.hpp>
-ScreenRecorder::ScreenRecorder(QWidget* parent)
-    : QWidget(parent)
+
+ScreenRecorder::ScreenRecorder(QWidget* parent) : QWidget(parent)
 {
     setWindowTitle("Screen Recorder");
 
@@ -16,8 +16,24 @@ ScreenRecorder::ScreenRecorder(QWidget* parent)
     stopButton->setEnabled(false);
     connect(stopButton, SIGNAL(clicked()), this, SLOT(stopRecording()));
 
+    textlabel1 = new QLabel("Name");
+    text1 = new QLineEdit;
+
+    textlabel2 = new QLabel("email id");
+    text2 = new QLineEdit;
+
+    submitButton = new QPushButton("Submit", this);
+
+    connect(submitButton, SIGNAL(clicked()), this, SLOT(getSensitiveInfo()));
+
+    QFormLayout* formlayout = new QFormLayout;
+    formlayout->addRow(textlabel1, text1);
+    formlayout->addRow(textlabel2, text2);
+
     QVBoxLayout* layout = new QVBoxLayout(this);
+    layout->addLayout(formlayout);
     layout->addWidget(outputLabel);
+    layout->addWidget(submitButton);
     layout->addWidget(startButton);
     layout->addWidget(stopButton);
 
@@ -33,6 +49,13 @@ ScreenRecorder::ScreenRecorder(QWidget* parent)
 
     tess.SetPageSegMode(tesseract::PageSegMode::PSM_AUTO);
     tess.SetVariable("save_best_choices", "T");
+}
+
+void ScreenRecorder::getSensitiveInfo()
+{
+    sensitiveInfo.push_back(text1->text().toStdString());
+    sensitiveInfo.push_back(text2->text().toStdString());
+    submitButton->setEnabled(false);
 }
 
 void ScreenRecorder::startRecording()
@@ -66,7 +89,7 @@ QPixmap ScreenRecorder::convertPix(QPixmap& pixmap)
 
     QPainter painter(&pixmap);
     QPen pen(Qt::red);
-    QBrush brush(Qt::blue);
+    QBrush brush(Qt::black);
     pen.setWidth(2);
     painter.setPen(pen);
     painter.setBrush(brush);
@@ -75,12 +98,21 @@ QPixmap ScreenRecorder::convertPix(QPixmap& pixmap)
     {
         do 
         {
+            bool flag = false;
             int x1, y1, x2, y2;
             ri->BoundingBox(level, &x1, &y1, &x2, &y2);
-            //const char* text = ri->GetUTF8Text(level);
-            //delete[] text;
+            std::string text(ri->GetUTF8Text(level));
 
-            painter.drawRect(x1, y1, x2 - x1, y2 - y1);
+            for (const std::string& stext : sensitiveInfo)
+            {
+                if (text.find(stext) != std::string::npos)
+                {
+                    painter.drawRect(x1, y1, x2 - x1, y2 - y1);
+                    qDebug() << stext << text;
+                    flag = true;
+                    break;
+                }
+            }
         } while (ri->Next(level));
     }
 
