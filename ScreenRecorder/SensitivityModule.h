@@ -1,6 +1,6 @@
 #ifndef SENSITIVITYMODULE_H
 #define SENSITIVITYMODULE_H
-#include "WindowTracker.h"
+#include <windows.h>
 #include <QRect>
 #include <map>
 

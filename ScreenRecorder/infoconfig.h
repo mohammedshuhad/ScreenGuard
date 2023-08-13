@@ -36,6 +36,8 @@ private:
     std::vector<std::string> mEntries;
     int mFieldCount;
     QScreen *screen;
+
+    void setScreenImages();
 };
 
 #endif // INFOCONFIG_H

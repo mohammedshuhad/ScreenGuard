@@ -51,7 +51,8 @@ public:
 
     void retranslateUi(QMainWindow *ScreenFilter)
     {
-        ScreenFilter->setWindowTitle(QCoreApplication::translate("ScreenFilter", "MainWindow", nullptr));
+        ScreenFilter->setWindowTitle(QCoreApplication::translate("ScreenFilter", "ScreenGuard", nullptr));
+        ScreenFilter->setWindowIcon(QApplication::style()->standardIcon(QStyle::SP_DesktopIcon));
         pushButton->setText(QCoreApplication::translate("ScreenFilter", "Back", nullptr));
     } // retranslateUi
 

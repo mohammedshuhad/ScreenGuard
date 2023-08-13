@@ -114,7 +114,7 @@ void ScreenFilter::runOcr(cv::Mat& mat)
             }
         } while (ri->Next(tesseract::RIL_TEXTLINE));
     }
-    delete ri;
+    delete ri; 
 }
 void ScreenFilter::paintBoxes(QPixmap& pixmap)
 {

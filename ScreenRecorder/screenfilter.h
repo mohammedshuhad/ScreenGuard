@@ -16,7 +16,7 @@
 #include <algorithm>
 #include <map>
 
-#include "WindowTracker.h"
+#include <windows.h>
 #include "SensitivityModule.h"
 
 
