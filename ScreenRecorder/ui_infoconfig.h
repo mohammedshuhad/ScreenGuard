@@ -86,7 +86,7 @@ public:
         label->setText(QCoreApplication::translate("InfoConfig", "Add the Specific Information to be hidden :", nullptr));
         pushButton_3->setText(QCoreApplication::translate("InfoConfig", "Add new field", nullptr));
         pushButton->setText(QCoreApplication::translate("InfoConfig", "Start", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("InfoConfig", "Back", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("InfoConfig", "Close", nullptr));
         lineEdit->setPlaceholderText(QCoreApplication::translate("InfoConfig", "Enter the text to be hidden here...", nullptr));
     } // retranslateUi
 

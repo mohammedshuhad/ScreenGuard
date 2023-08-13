@@ -1,6 +1,6 @@
-#include "infoconfig.h"
+#include "InfoConfig.h"
 #include "ui_infoconfig.h"
-#include<QMessageBox>
+
 InfoConfig::InfoConfig(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::InfoConfig)
@@ -18,9 +18,8 @@ InfoConfig::~InfoConfig()
 
 void InfoConfig::on_pushButton_2_clicked()
 {
-    //back button
-    emit backButtonClicked();
-    hide();
+    //close button
+    close();
 
 }
 
@@ -28,6 +27,8 @@ void InfoConfig::on_pushButton_2_clicked()
 void InfoConfig::on_pushButton_clicked()
 {
     //start button
+    if(!ui->lineEdit->text().toStdString().empty())
+        mEntries.push_back(ui->lineEdit->text().toStdString());
     for (auto entry : mLineEdits)
     {
         QString text = entry->text();

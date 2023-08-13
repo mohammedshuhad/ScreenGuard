@@ -3,9 +3,10 @@
 
 #include <QDialog>
 #include <QLineEdit>
-#include<QScreen>
-#include "screenfilter.h"
-#include<string>
+#include <QScreen>
+#include <QMessageBox>
+#include "ScreenFilter.h"
+#include <string>
 const int maxFields = 10;
 
 namespace Ui {
@@ -28,8 +29,6 @@ private slots:
     void on_pushButton_3_clicked();
 
     void showWindow();
-signals:
-    void backButtonClicked();
 private:
     Ui::InfoConfig *ui;
     ScreenFilter *mScreenFilter;
