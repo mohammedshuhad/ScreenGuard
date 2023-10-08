@@ -1,0 +1,11 @@
+/tessdata
+/x64
+vcxproj
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.qrc
+*.ui
+/.vs
+/screenguardfinal
