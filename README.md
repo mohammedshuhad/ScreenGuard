@@ -72,29 +72,40 @@ needs careful selection to prevent false positives.
 [1] Kent, A., & Williams, J. G. (1996). Encyclopedia of Microcomputers: Volume 19 - Truth
 Maintenance Systems to Visual Display Quality. CRC Press. Retrieved June 8, 2017, from ISBN
 9780824727178.
+
 [2] C. Tronche. "The Xlib Manual.". [Online]. Available:
 https://tronche.com/gui/x/xlib/introduction/overview.html. [Accessed: Aug 15, 2023].
+
 [3] A. Coopersmith, M. Dev, and the X.Org team (Eds.), "The X New Developer's Guide."
 Edited by B. Massey, Portland, Oregon, USA, March 2012.
+
 [4] The Qt Company. "Qt 6.5 All C++ Classes". [Online]. Available:
 https://doc.qt.io/qt-6/classes.html. [Accessed: Aug 15, 2023].
+
 [5] G. Schechter, "Under the hood of Desktop Window Manager," Greg Schechter's Blog,
 MSDN Blogs. [Online]. Available:
 https://blogs.msdn.microsoft.com/greg_schechter/2006/03/22/under-the-hood-of-desktop-windo
 w-manager/. [Accessed: Aug 20, 2021].
+
 [6] Apple. "Quartz." Available :https://developer.apple.com/documentation/quartz [Accessed:
 Aug 20, 2021].
+
 [7] Microsoft. "Windows API - Win32 apps." Available :
 https://learn.microsoft.com/en-us/windows/win32/api/_winmsg/. [Accessed: Aug 20, 2021].
+
 [8] X. Yin, Z. Zuo, S. Tian, and C. Liu, "Text Detection, Tracking and Recognition in Video: A
 Comprehensive Survey," in IEEE Transactions on Image Processing, vol. 25, no. 6, pp.
 2752-2773, June 2016, doi: 10.1109/TIP.2016.2551158.
+
 [9] P. X. Nguyen, K. Wang, and S. Belongie, “Video text detection and recognition: Dataset and
 benchmark,” in Proc. IEEE Winter Conf. Appl. Comput. Vis., Mar. 2014, pp. 776–783.
+
 [10] J. Kleinberg and E. Tardos. Dynamic Programming. In Algorithm Design,(Eds 1), Cornell
 University, pp 278-290.
+
 [11]. Qianping, G. (2023, August 10). "Dynamic Programming" Presented in Design and
 Analysis of Algorithms (CMPT 705), Simon Fraser University, August 10, 2023.
+
 [12] Tesseract-OCR. (2023, Aug). Tessdoc: Tesseract Documentation. [Online].
 Available:https://github.com/tesseract-ocr/tessdoc
 
